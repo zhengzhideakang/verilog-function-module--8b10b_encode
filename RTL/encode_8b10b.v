@@ -3,7 +3,7 @@
  * @Email        :
  * @Date         : 2026-03-08 10:40:22
  * @LastEditors  : Xu Xiaokang
- * @LastEditTime : 2026-03-09 17:07:17
+ * @LastEditTime : 2026-08-10 22:27:48
  * @Filename     : encode_8b10b.v
  * @Description  : 8b10b编码顶层
 */
@@ -37,7 +37,7 @@ module encode_8b10b
   input  wire       din_8b_is_k_or_d_n, // 输入数据类型标志: 1 = K码, 0 = D码
 
   output reg [9:0] dout_10b, // 输出10位编码 {j, h, g, f, i, e, d, c, b, a}
-  output reg       dout_10b_valid, // 输出有效, 高电平指示, 比din_8b_valid延时2个clk时钟周期
+  output reg       dout_10b_valid, // 输出有效, 高电平有效, 比din_8b_valid延时2个clk时钟周期
 
   output reg din_k_error, // 输入8b K码错误
   output reg dout_k_error, // 输出10b K码错误
